@@ -9,6 +9,7 @@ export function Header(props) {
         return;
       }
       props.addNewItem({ title: input.current.value });
+      input.current.value = "";
     }
   };
   return (
@@ -18,7 +19,6 @@ export function Header(props) {
         ref={input}
         className="new-todo"
         placeholder="What needs to be done?"
-        autoFocus
         onKeyDown={handleClick}
       />
     </header>

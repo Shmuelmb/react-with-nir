@@ -5,7 +5,12 @@ export function List(props) {
       <input className="toggle-all" type="checkbox" />
       <ul className="todo-list">
         {props.items.map((item) => (
-          <Item title={item.title} deleteItem={props.deleteItem} />
+          <Item
+            title={item.title}
+            id={item.id}
+            deleteItem={props.deleteItem}
+            updateItem={props.updateItem}
+          />
         ))}
       </ul>
     </section>
